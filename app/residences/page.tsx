@@ -12,10 +12,9 @@ import {
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { ArrowRight, BedDouble, Maximize, Maximize2 } from 'lucide-react';
 import { UnitLayout } from '@/components/unit-layout';
-import { RegisterInterest } from '@/components/register-interest';
 
 export const metadata: Metadata = {
-  title: 'Residences | Residences at Lumina Sancruary',
+  title: 'Residences | Residences at Lumina Sanctuary',
   description:
     'Explore our luxurious residential units designed for modern living.',
 };
@@ -103,8 +102,8 @@ export default function Residences() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">Our Residences</h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-200">
+          <h1 className="font-bold mb-6 text-4xl sm:text-5xl md:text-7xl">Our Residences</h1>
+          <p className="text-lg md:text-xl lg:2xl mb-8 text-gray-200">
             Discover exceptional eco-friendly living spaces designed for modern
             luxury
           </p>
@@ -112,10 +111,10 @@ export default function Residences() {
       </section>
 
       {/* Site Plan Section */}
-      <section className="py-16 sm:py-20 md:py-24">
+      <section className="py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+          <div className="gap-8 xl:gap-12 items-center grid xl:grid-cols-2">
+            <div className="order-2 xl:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
               <div className="relative aspect-video w-full">
                 <Image
                   src="/site_map.jpg"
@@ -148,9 +147,9 @@ export default function Residences() {
                 </DialogContent>
               </Dialog>
             </div>
-            <div className="order-1 lg:order-2">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Site Plan</h2>
-              <div className="space-y-6 text-sm sm:text-base md:text-lg">
+            <div className="order-1 xl:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center xl:text-left">Site Plan</h2>
+              <div className="hidden xl:block space-y-6 text-lg">
                 <p>
                   Luxury and sophistication merge seamlessly on approximately
                   133,343 square feet of prime land. Crafted for those with
@@ -167,24 +166,40 @@ export default function Residences() {
                 </p>
               </div>
             </div>
+            <div className="mt-8 order-3 block xl:hidden space-y-6 text-sm sm:text-base md:text-lg">
+                <p>
+                  Luxury and sophistication merge seamlessly on approximately
+                  133,343 square feet of prime land. Crafted for those with
+                  discerning tastes and providing an unmatched living
+                  experience. From opulent interiors to top-tier amenities,
+                  every detail is meticulously designed to exceed expectations,
+                  offering a lifestyle of unparalleled luxury.
+                </p>
+                <p>
+                  Experience a range of options to suit your needs with
+                  approximately 680 units of various sizes. Whether you're an
+                  investor seeking opportunities or a family looking for the
+                  perfect home, this development has you covered.
+                </p>
+              </div>
           </div>
         </div>
       </section>
 
       {/* Unit Types Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-14 sm:py-16 md:py-20 lg:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Available Units
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
               Discover the ideal space that aligns with your lifestyle and
-              aspirations.
+              aspirations
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {unitTypes.map((unit) => (
               <Card key={unit.id} className="overflow-hidden">
                 <CardHeader>
@@ -214,7 +229,7 @@ export default function Residences() {
       </section>
 
       {/* Amenities Section */}
-      <section className="py-16 sm:py-20 md:py-24">
+      <section className="py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
@@ -295,10 +310,10 @@ export default function Residences() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-            Secure Your Place in This Luxury Residences
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Secure Your Place in this Luxury Residence
           </h2>
-          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto max-w-2xl mx-auto mb-8 text-base md:text-xl">
             Register your interest now to receive exclusive updates and private
             viewing invitations
           </p>

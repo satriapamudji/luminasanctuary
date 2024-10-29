@@ -8,7 +8,7 @@ import { Toaster } from '@/components/ui/sonner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'The Residences | Luxury Living Redefined',
+  title: 'Lumina Sanctuary | Luxury Living Redefined',
   description: 'Experience unparalleled luxury in our exclusive residential development.',
 };
 

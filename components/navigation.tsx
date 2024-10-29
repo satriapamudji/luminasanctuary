@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Building2, Menu, ArrowRight } from 'lucide-react';
 
 const routes = [
@@ -61,7 +61,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-6">
             {routes.map((route) => (
               <Link
                 key={route.href}
@@ -83,7 +83,7 @@ export function Navigation() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
               variant={isScrolled ? 'default' : 'secondary'}
               className={cn(
@@ -101,7 +101,7 @@ export function Navigation() {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button
@@ -118,25 +118,28 @@ export function Navigation() {
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
                   {routes.map((route) => (
-                    <Link
-                      key={route.href}
-                      href={route.href}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary py-2',
-                        route.active(pathname)
-                          ? 'text-primary'
-                          : 'text-muted-foreground'
-                      )}
-                    >
-                      {route.label}
-                    </Link>
+                    <SheetClose asChild key={route.href}>
+                      <Link
+                        href={route.href}
+                        className={cn(
+                          'text-lg font-medium transition-colors hover:text-primary py-2',
+                          route.active(pathname)
+                            ? 'text-primary'
+                            : 'text-muted-foreground'
+                        )}
+                      >
+                        {route.label}
+                      </Link>
+                    </SheetClose>
                   ))}
-                  <Button className="mt-4 w-full" asChild>
-                    <Link href="/register">
-                      Register Interest
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
+                  <SheetClose asChild>
+                    <Button className="mt-12 px-6" asChild>
+                      <Link href="/register">
+                        Register Interest
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </SheetClose>
                 </div>
               </SheetContent>
             </Sheet>

@@ -102,19 +102,19 @@ export default function Location() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">Prime Location</h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-200">
-            Situated in the most coveted neighborhood, offering the perfect
+          <h1 className="font-bold mb-6 text-4xl sm:text-5xl md:text-7xl">Prime Location</h1>
+          <p className="text-lg md:text-xl lg:2xl mb-8 text-gray-200">
+            Lumina Sanctuary is situated in the most coveted neighborhood, offering the perfect
             blend of convenience and luxury
           </p>
         </div>
       </section>
 
       {/* Location Map Section */}
-      <section className="py-16 sm:py-20 md:py-24">
+      <section className="py-14 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+          <div className="grid xl:grid-cols-2 gap-8 xl:gap-12 items-center">
+            <div className="order-2 xl:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
               <div className="relative aspect-video w-full">
                 <Image
                   src="/site_plan.jpg"
@@ -146,11 +146,11 @@ export default function Location() {
                 </DialogContent>
               </Dialog>
             </div>
-            <div className="order-1 lg:order-2">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
+            <div className="order-1 xl:order-2">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center xl:text-left">
                 Explore the Location
               </h2>
-              <div className="space-y-6 text-sm sm:text-base md:text-lg">
+              <div className="hidden xl:block space-y-6 text-lg">
                 <p>
                   Lumina Sancturary is an exquisite residential haven in the
                   heart of Prime District 10. Situated just minutes walk from
@@ -176,6 +176,31 @@ export default function Location() {
                 </p>
               </div>
             </div>
+            <div className="mt-8 order-3 block xl:hidden space-y-6 text-sm sm:text-base md:text-lg">
+                <p>
+                  Lumina Sancturary is an exquisite residential haven in the
+                  heart of Prime District 10. Situated just minutes walk from
+                  Holland Village MRT station, this esteemed address offers
+                  unparalleled convenience and connectivity for residents
+                  seeking the ultimate urban lifestyle experience.
+                </p>
+                <p>
+                  Nestled within close proximity to various amenities, Lumina
+                  Sancturary epitomizes modern living at its finest. Adjacent to
+                  the vibrant One Holland Village, residents can immerse
+                  themselves in a diverse array of F&B options and retail
+                  offerings, ensuring every need and desire is effortlessly met.
+                </p>
+                <p>
+                  Furthermore, Lumina Sancturary boasts a prestigious locale
+                  surrounded by esteemed educational institutions. Families will
+                  appreciate the convenience of having renowned schools such as
+                  Henry Park Primary School, Anglo-Chinese School
+                  (International), Fairfield Methodist School (Primary and
+                  Secondary), and Anglo-Chinese Junior College within easy
+                  reach.
+                </p>
+              </div>
           </div>
         </div>
       </section>
@@ -226,16 +251,16 @@ export default function Location() {
       <section className="relative py-24">
         <Image
           src="/footer.jpg"
-          alt="Neighborhood"
+          alt="Luxury Interior"
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
-            Secure Your Place in This Prime Location
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Secure Your Place in this Prime Location
           </h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-gray-200 max-w-2xl mx-auto max-w-2xl mx-auto mb-8 text-base md:text-xl">
             Register your interest now to receive exclusive updates and private
             viewing invitations
           </p>

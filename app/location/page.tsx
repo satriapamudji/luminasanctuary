@@ -240,8 +240,8 @@ export default function Location() {
             viewing invitations
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/#register">
-              Register Interest
+            <Link href="/register">
+              Secure My Place
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

@@ -102,8 +102,8 @@ export default function Location() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Prime Location</h1>
-          <p className="text-xl text-gray-200">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">Prime Location</h1>
+          <p className="text-lg md:text-xl mb-8 text-gray-200">
             Situated in the most coveted neighborhood, offering the perfect
             blend of convenience and luxury
           </p>
@@ -111,10 +111,10 @@ export default function Location() {
       </section>
 
       {/* Location Map Section */}
-      <section className="py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+            <div className="order-2 lg:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
               <div className="relative aspect-video w-full">
                 <Image
                   src="/site_plan.jpg"
@@ -146,11 +146,11 @@ export default function Location() {
                 </DialogContent>
               </Dialog>
             </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="order-1 lg:order-2">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
                 Explore the Location
               </h2>
-              <div className="space-y-6 text-lg">
+              <div className="space-y-6 text-sm sm:text-base md:text-lg">
                 <p>
                   Lumina Sancturary is an exquisite residential haven in the
                   heart of Prime District 10. Situated just minutes walk from
@@ -181,10 +181,10 @@ export default function Location() {
       </section>
 
       {/* Detailed Location Categories */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Everything Within Reach
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -232,7 +232,7 @@ export default function Location() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6">
             Secure Your Place in This Prime Location
           </h2>
           <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">

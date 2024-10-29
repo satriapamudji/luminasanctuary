@@ -103,8 +103,8 @@ export default function Residences() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-6">Our Residences</h1>
-          <p className="text-xl text-gray-200">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6">Our Residences</h1>
+          <p className="text-lg md:text-xl mb-8 text-gray-200">
             Discover exceptional eco-friendly living spaces designed for modern
             luxury
           </p>
@@ -112,10 +112,10 @@ export default function Residences() {
       </section>
 
       {/* Site Plan Section */}
-      <section className="py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+            <div className="order-2 lg:order-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
               <div className="relative aspect-video w-full">
                 <Image
                   src="/site_map.jpg"
@@ -148,9 +148,9 @@ export default function Residences() {
                 </DialogContent>
               </Dialog>
             </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Site Plan</h2>
-              <div className="space-y-6 text-lg">
+            <div className="order-1 lg:order-2">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6">Site Plan</h2>
+              <div className="space-y-6 text-sm sm:text-base md:text-lg">
                 <p>
                   Luxury and sophistication merge seamlessly on approximately
                   133,343 square feet of prime land. Crafted for those with
@@ -172,13 +172,13 @@ export default function Residences() {
       </section>
 
       {/* Unit Types Section */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-20 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Available Units
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover the ideal space that aligns with your lifestyle and
               aspirations.
             </p>
@@ -214,10 +214,10 @@ export default function Residences() {
       </section>
 
       {/* Amenities Section */}
-      <section className="py-24">
+      <section className="py-16 sm:py-20 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               Luxury Amenities
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -295,10 +295,10 @@ export default function Residences() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             Secure Your Place in This Luxury Residences
           </h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
             Register your interest now to receive exclusive updates and private
             viewing invitations
           </p>

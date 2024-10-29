@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Quick Facts Section */}
-      <section className="py-16 bg-white dark:bg-gray-950">
+      <section className="py-16 sm:py-20 md:py-24 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-8 mb-8">
             <Card>
@@ -128,13 +128,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 sm:py-24 md:py-32 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Elevated Living, Consciously Crafted
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Where timeless luxury meets innovative living, creating an
               unparalleled sanctuary of sophistication and sustainability.
             </p>
@@ -191,13 +191,13 @@ export default function Home() {
       </section>
 
       {/* Location Preview Section */}
-      <section className="py-24 bg-white dark:bg-gray-950">
+      <section className="py-16 sm:py-20 md:py-24 bg-white dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Prime Location
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4">
               Situated in the heart of Holland Village, offering unparalleled
               connectivity
             </p>
@@ -246,10 +246,10 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
             Secure Your Place in This Elevated Development
           </h2>
-          <p className="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl mb-8 text-gray-200 max-w-2xl mx-auto">
             Register your interest now to receive exclusive updates and private
             viewing invitations
           </p>

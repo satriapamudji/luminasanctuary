@@ -13,12 +13,7 @@ import {
   Award,
   Shield,
   Sparkles,
-  MapPin,
-  Clock,
-  Building,
-  GraduationCap,
 } from 'lucide-react';
-import { RegisterInterest } from '@/components/register-interest';
 import { LocationPreview } from '@/components/location-preview';
 
 export default function Home() {
@@ -44,7 +39,7 @@ export default function Home() {
             A new standard of luxury living coming soon to District 10
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="lighthover" asChild>
+            <Button size="lg" variant="lighthover" className='min-w-full sm:min-w-0' asChild>
               <Link
                 href="https://vimeo.com/1024271502?share=copy&autoplay=1&quality=1080p"
                 target="_blank"
@@ -53,7 +48,7 @@ export default function Home() {
                 Preview Video
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10" asChild>
+            <Button size="lg" variant="outline" className="bg-white/10 min-w-full sm:min-w-0" asChild>
               <Link href="/register">
                 Register Interest
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -69,24 +64,24 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-8 mb-8">
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Site</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">Site</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   Holland Drive GLS
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Location</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">Location</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   D10 - Tanglin / Holland
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Tenure</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">Tenure</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   99 Years
                 </CardDescription>
               </CardHeader>
@@ -96,24 +91,24 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-8 mb-8">
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Units</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">Units</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   Approx. 680
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">Site Area</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">Site Area</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   133,343 sqft
                 </CardDescription>
               </CardHeader>
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl">TOP</CardTitle>
-                <CardDescription className="text-xl font-semibold">
+                <CardTitle className="text-base sm:text-xl md:text-2xl">TOP</CardTitle>
+                <CardDescription className="text-sm sm:text-lg md:text-xl font-semibold">
                   TBA
                 </CardDescription>
               </CardHeader>
@@ -122,8 +117,8 @@ export default function Home() {
 
           <Card className="bg-gray-900 text-white dark:bg-gray-800">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Developer</CardTitle>
-              <CardDescription className="text-lg text-gray-300">
+              <CardTitle className="text-base sm:text-xl md:text-2xl">Developer</CardTitle>
+              <CardDescription className=" text-gray-300 text-sm sm:text-lg md:text-xl font-semibold">
                 CapitaLand Development, UOL Group, Singapore Land Group and
                 Kheng Leong Co.
               </CardDescription>

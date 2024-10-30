@@ -32,7 +32,7 @@ const benefits = [
 export default function Register() {
   return (
     <>
-      <section className="relative h-[40vh] flex items-center justify-center">
+      <section className="relative h-[80vh] sm:h-[60vh] flex items-center justify-center">
         <Image
           src="/register.jpg"
           alt="Luxury Interior"
@@ -41,7 +41,7 @@ export default function Register() {
           priority
         />
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 mt-20 sm:mt-0">
           <h1 className="font-bold mb-6 text-4xl sm:text-5xl md:text-7xl">Register Your Interest</h1>
           <p className="text-lg md:text-xl lg:2xl mb-8 text-gray-200">
             Join our exclusive list for priority access and special privileges

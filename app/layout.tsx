@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/sonner';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://luminasanctuary.netlify.app'),
   title: 'Lumina Sanctuary | Luxury Living Redefined',
   description: 'Experience unparalleled luxury in our exclusive residential development.',
   icons: {
@@ -38,7 +39,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Lumina Sanctuary | Luxury Living Redefined',
     description: 'Experience unparalleled luxury in our exclusive residential development.',
-    images: ['/og-image.jpg'],
+    images: {
+      url: '/og-image.jpg',
+      alt: 'Lumina Sanctuary Preview'
+    },
   },
 };
 

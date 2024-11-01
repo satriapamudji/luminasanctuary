@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function BrochurePage() {
   const [viewHeight, setViewHeight] = useState("100vh");
-  const [isMobile, setIsMobile] = useState(null);
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
   const HEADER_HEIGHT = 96;
   const BOTTOM_PADDING = 32;
 
@@ -43,7 +43,7 @@ export default function BrochurePage() {
   }, []);
 
   // Don't render anything until we know if it's mobile or not
-  if (isMobile === null) {
+  if (isMobile === undefined) {
     return null;
   }
 
@@ -92,8 +92,8 @@ export default function BrochurePage() {
                     Lumina Sanctuary Brochure
                   </h3>
                   <p className="text-gray-100 text-lg leading-relaxed">
-                    View our brochure to explore our exclusive residences and
-                    amenities.
+                    Get full details on our exclusive residences and premier
+                    amenities, available only in our downloadable brochure.
                   </p>
                 </div>
                 <div className="flex flex-col w-full space-y-4">
@@ -147,9 +147,10 @@ export default function BrochurePage() {
                   `,
                   zIndex: 10,
                 }}
-                onLoad={(e) => {
-                  const loader = e.target.parentElement?.querySelector(".z-20");
-                  if (loader) loader.style.display = "none";
+                onLoad={(e: React.SyntheticEvent<HTMLIFrameElement, Event>) => {
+                  const iframe = e.currentTarget;
+                  const loader = iframe.parentElement?.querySelector(".z-20");
+                  if (loader) (loader as HTMLElement).style.display = "none";
                 }}
               />
             </>

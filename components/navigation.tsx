@@ -1,28 +1,38 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Building2, Menu, ArrowRight } from 'lucide-react';
+import * as React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
+import { Menu, ArrowRight } from "lucide-react";
 
 const routes = [
   {
-    href: '/',
-    label: 'Home',
-    active: (pathname: string) => pathname === '/',
+    href: "/",
+    label: "Home",
+    active: (pathname: string) => pathname === "/",
   },
   {
-    href: '/residences',
-    label: 'Residences',
-    active: (pathname: string) => pathname === '/residences',
+    href: "/residences",
+    label: "Residences",
+    active: (pathname: string) => pathname === "/residences",
   },
   {
-    href: '/location',
-    label: 'Location',
-    active: (pathname: string) => pathname === '/location',
+    href: "/location",
+    label: "Location",
+    active: (pathname: string) => pathname === "/location",
+  },
+  {
+    href: "/brochure",
+    label: "Brochure",
+    active: (pathname: string) => pathname === "/brochure",
   },
 ];
 
@@ -35,46 +45,37 @@ export function Navigation() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm dark:bg-gray-950/95'
-          : 'bg-black/40 backdrop-blur-sm'
+        "fixed top-0 w-full z-50 transition-all duration-500",
+        isScrolled ? "bg-black/40 backdrop-blur-md" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <Link
             href="/"
-            className={cn(
-              'flex items-center space-x-2 text-xl font-bold',
-              isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
-            )}
+            className="flex items-center space-x-2 text-xl font-bold text-white"
           >
             <span>Lumina Sanctuary</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-8">
             {routes.map((route) => (
               <Link
                 key={route.href}
                 href={route.href}
                 className={cn(
-                  'text-sm font-medium transition-colors',
+                  "text-sm font-medium transition-colors duration-300",
                   route.active(pathname)
-                    ? isScrolled
-                      ? 'text-gray-900 dark:text-white'
-                      : 'text-white'
-                    : isScrolled
-                    ? 'text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white'
-                    : 'text-gray-200 hover:text-white'
+                    ? "text-white font-semibold"
+                    : "text-gray-200 hover:text-white"
                 )}
               >
                 {route.label}
@@ -85,11 +86,9 @@ export function Navigation() {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button
-              variant={isScrolled ? 'default' : 'secondary'}
               className={cn(
-                isScrolled
-                  ? 'bg-gray-900 text-white hover:bg-gray-800 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100'
-                  : 'bg-white text-gray-900 hover:bg-gray-100'
+                "h-10 px-6 text-sm font-medium transition-colors duration-300",
+                "bg-white text-gray-900 hover:bg-gray-100"
               )}
               asChild
             >
@@ -107,39 +106,46 @@ export function Navigation() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={cn(
-                    'text-white',
-                    isScrolled && 'text-gray-900 dark:text-white'
-                  )}
+                  className="text-white hover:bg-white/10"
                 >
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col space-y-4 mt-8">
-                  {routes.map((route) => (
-                    <SheetClose asChild key={route.href}>
-                      <Link
-                        href={route.href}
-                        className={cn(
-                          'text-lg font-medium transition-colors hover:text-primary py-2',
-                          route.active(pathname)
-                            ? 'text-primary'
-                            : 'text-muted-foreground'
-                        )}
+              <SheetContent
+                side="right"
+                className="w-full sm:w-80 p-0 bg-black/90 border-0 [&>button]:text-white [&>button]:hover:bg-white/10"
+              >
+                <div className="flex flex-col h-full">
+                  <div className="flex flex-col space-y-6 px-8 pt-16">
+                    {routes.map((route) => (
+                      <SheetClose asChild key={route.href}>
+                        <Link
+                          href={route.href}
+                          className={cn(
+                            "text-base font-medium transition-colors",
+                            route.active(pathname)
+                              ? "text-white font-semibold"
+                              : "text-gray-200 hover:text-white"
+                          )}
+                        >
+                          {route.label}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </div>
+                  <div className="mt-auto p-8">
+                    <SheetClose asChild>
+                      <Button
+                        className="w-full bg-white text-gray-900 hover:bg-gray-100"
+                        asChild
                       >
-                        {route.label}
-                      </Link>
+                        <Link href="/register">
+                          Register Interest
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
                     </SheetClose>
-                  ))}
-                  <SheetClose asChild>
-                    <Button className="mt-12 px-6" asChild>
-                      <Link href="/register">
-                        Register Interest
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </SheetClose>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

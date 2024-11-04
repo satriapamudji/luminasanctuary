@@ -1,90 +1,90 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { ArrowRight, BedDouble, Maximize, Maximize2 } from 'lucide-react';
-import { UnitLayout } from '@/components/unit-layout';
+} from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { ArrowRight, BedDouble, Maximize, Maximize2 } from "lucide-react";
+import { UnitLayout } from "@/components/unit-layout";
 
 export const metadata: Metadata = {
-  title: 'Residences | Residences at Lumina Sanctuary',
+  title: "Residences | Residences at Lumina Sanctuary",
   description:
-    'Explore our luxurious residential units designed for modern living.',
+    "Explore our luxurious residential units designed for modern living.",
 };
 
 const unitTypes = [
   {
-    id: '1br-deluxe',
-    title: '1-Bedroom Deluxe',
-    description: 'Perfect for singles or couples',
+    id: "1br-deluxe",
+    title: "1-Bedroom Deluxe",
+    description: "Perfect for singles or couples",
     specs: {
       bedrooms: 1,
-      size: '560',
+      size: "560",
       units: 120,
     },
-    layout: '/plan_typea.png',
+    layout: "/plan_typea.png",
   },
   {
-    id: '2br-platinum',
-    title: '2-Bedroom Platinum',
-    description: 'Ideal for small families',
+    id: "2br-platinum",
+    title: "2-Bedroom Platinum",
+    description: "Ideal for small families",
     specs: {
       bedrooms: 2,
-      size: '820',
+      size: "820",
       units: 160,
     },
-    layout: '/plan_typeb.png',
+    layout: "/plan_typeb.png",
   },
   {
-    id: '2br-deluxe-study',
-    title: '2-Bedroom Deluxe (S)',
-    description: 'Extra space for work or leisure',
+    id: "2br-deluxe-study",
+    title: "2-Bedroom Deluxe (S)",
+    description: "Extra space for work or leisure",
     specs: {
       bedrooms: 2,
-      size: '960',
+      size: "960",
       units: 160,
     },
-    layout: '/plan_typec.png',
+    layout: "/plan_typec.png",
   },
   {
-    id: '3br-premium',
-    title: '3-Bedroom Premium',
-    description: 'Spacious living for families',
+    id: "3br-premium",
+    title: "3-Bedroom Premium",
+    description: "Spacious living for families",
     specs: {
       bedrooms: 3,
-      size: '1080',
+      size: "1080",
       units: 120,
     },
-    layout: '/plan_typed.png',
+    layout: "/plan_typed.png",
   },
   {
-    id: '3br-premium-plus',
-    title: '3-Bedroom Premium+',
-    description: 'Enhanced comfort and luxury',
+    id: "3br-premium-plus",
+    title: "3-Bedroom Premium+",
+    description: "Enhanced comfort and luxury",
     specs: {
       bedrooms: 3,
-      size: '960',
+      size: "1140",
       units: 80,
     },
-    layout: '/plan_typee.png',
+    layout: "/plan_typee.png",
   },
   {
-    id: '4br-platinum',
-    title: '4-Bedroom Platinum',
-    description: 'Ultimate family living space',
+    id: "4br-platinum",
+    title: "4-Bedroom Platinum",
+    description: "Ultimate family living space",
     specs: {
       bedrooms: 4,
-      size: '1080',
+      size: "1346",
       units: 40,
     },
-    layout: '/plan_typef.png',
+    layout: "/plan_typef.png",
   },
 ];
 
@@ -102,7 +102,9 @@ export default function Residences() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 mt-20 sm:mt-0">
-          <h1 className="font-bold mb-6 text-4xl sm:text-5xl md:text-7xl">Our Residences</h1>
+          <h1 className="font-bold mb-6 text-4xl sm:text-5xl md:text-7xl">
+            Our Residences
+          </h1>
           <p className="text-lg md:text-xl lg:2xl mb-8 text-gray-200">
             Discover exceptional eco-friendly living spaces designed for modern
             luxury
@@ -148,7 +150,9 @@ export default function Residences() {
               </Dialog>
             </div>
             <div className="order-1 xl:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center xl:text-left">Site Plan</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center xl:text-left">
+                Site Plan
+              </h2>
               <div className="hidden xl:block space-y-6 text-lg">
                 <p>
                   Luxury and sophistication merge seamlessly on approximately
@@ -167,21 +171,21 @@ export default function Residences() {
               </div>
             </div>
             <div className="mt-8 order-3 block xl:hidden space-y-6 text-sm sm:text-base md:text-lg">
-                <p>
-                  Luxury and sophistication merge seamlessly on approximately
-                  133,343 square feet of prime land. Crafted for those with
-                  discerning tastes and providing an unmatched living
-                  experience. From opulent interiors to top-tier amenities,
-                  every detail is meticulously designed to exceed expectations,
-                  offering a lifestyle of unparalleled luxury.
-                </p>
-                <p>
-                  Experience a range of options to suit your needs with
-                  approximately 680 units of various sizes. Whether you're an
-                  investor seeking opportunities or a family looking for the
-                  perfect home, this development has you covered.
-                </p>
-              </div>
+              <p>
+                Luxury and sophistication merge seamlessly on approximately
+                133,343 square feet of prime land. Crafted for those with
+                discerning tastes and providing an unmatched living experience.
+                From opulent interiors to top-tier amenities, every detail is
+                meticulously designed to exceed expectations, offering a
+                lifestyle of unparalleled luxury.
+              </p>
+              <p>
+                Experience a range of options to suit your needs with
+                approximately 680 units of various sizes. Whether you're an
+                investor seeking opportunities or a family looking for the
+                perfect home, this development has you covered.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -245,40 +249,40 @@ export default function Residences() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Smart Home Living',
+                title: "Smart Home Living",
                 description:
-                  'A cutting-edge smart home experience, fully integrated through a single app, giving residents seamless control over lighting, climate, security, and more—an exclusive feature found nowhere else',
-                image: '/amenities_app.jpg',
+                  "A cutting-edge smart home experience, fully integrated through a single app, giving residents seamless control over lighting, climate, security, and more—an exclusive feature found nowhere else",
+                image: "/amenities_app.jpg",
               },
               {
-                title: 'EV Charging',
+                title: "EV Charging",
                 description:
-                  'Sustainable EV charging stations available on-site, designed to support eco-friendly living and cater to the needs of environmentally conscious residents',
-                image: '/charging.jpg',
+                  "Sustainable EV charging stations available on-site, designed to support eco-friendly living and cater to the needs of environmentally conscious residents",
+                image: "/charging.jpg",
               },
               {
-                title: 'Spa & Wellness',
+                title: "Spa & Wellness",
                 description:
-                  'An eco-conscious sanctuary for relaxation, featuring sustainably designed massage rooms and a rejuvenating sauna, crafted to soothe both body and mind',
-                image: '/wellness.jpg',
+                  "An eco-conscious sanctuary for relaxation, featuring sustainably designed massage rooms and a rejuvenating sauna, crafted to soothe both body and mind",
+                image: "/wellness.jpg",
               },
               {
-                title: 'Eco-Friendly Pool',
+                title: "Eco-Friendly Pool",
                 description:
-                  'Stunning pool that uses robotic cleaners, a natural moss based filtration system, and more, to reduce the use of chemicals and costs',
-                image: '/amenity_pool.jpg',
+                  "Stunning pool that uses robotic cleaners, a natural moss based filtration system, and more, to reduce the use of chemicals and costs",
+                image: "/amenity_pool.jpg",
               },
               {
-                title: 'Open Spaces',
+                title: "Open Spaces",
                 description:
-                  'Beautifully designed eco-friendly areas that blend technology and nature, providing families with a safe, inviting space for quality time, play, and relaxation',
-                image: '/amenity_openspaces.jpg',
+                  "Beautifully designed eco-friendly areas that blend technology and nature, providing families with a safe, inviting space for quality time, play, and relaxation",
+                image: "/amenity_openspaces.jpg",
               },
               {
-                title: 'Fitness Center',
+                title: "Fitness Center",
                 description:
-                  'State-of-the-art equipments that are able to generate energy through exercise to promote active and sustainable lifestyles',
-                image: '/amenity_gym.jpg',
+                  "State-of-the-art equipments that are able to generate energy through exercise to promote active and sustainable lifestyles",
+                image: "/amenity_gym.jpg",
               },
             ].map((amenity, index) => (
               <Card key={index} className="overflow-hidden">

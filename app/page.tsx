@@ -1,20 +1,14 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import {
-  ArrowRight,
-  Award,
-  Shield,
-  Sparkles,
-  CirclePlay,
-} from 'lucide-react';
-import { LocationPreview } from '@/components/location-preview';
+} from "@/components/ui/card";
+import { ArrowRight, Award, Shield, Sparkles, CirclePlay } from "lucide-react";
+import { LocationPreview } from "@/components/location-preview";
 
 export default function Home() {
   return (
@@ -39,9 +33,14 @@ export default function Home() {
             A new standard of luxury living coming soon to District 10
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <Button size="lg" variant="lighthover" className="px-12 min-w-full md:min-w-0" asChild>
+            <Button
+              size="lg"
+              variant="lighthover"
+              className="px-12 min-w-full md:min-w-0"
+              asChild
+            >
               <Link
-                href="https://vimeo.com/1024271502?share=copy&autoplay=1&quality=1080p"
+                href="https://vimeo.com/1026425980?share=copy&autoplay=1&quality=1080p"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -49,7 +48,12 @@ export default function Home() {
                 <CirclePlay className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="px-11 bg-white/10 min-w-full md:min-w-0" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              className="px-11 bg-white/10 min-w-full md:min-w-0"
+              asChild
+            >
               <Link href="/register">
                 Register Interest
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -65,7 +69,9 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">Site</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  Site
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   Holland Drive GLS
                 </CardDescription>
@@ -73,7 +79,9 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">Location</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  Location
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   D10 - Tanglin / Holland
                 </CardDescription>
@@ -81,7 +89,9 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">Tenure</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  Tenure
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   99 Years
                 </CardDescription>
@@ -89,7 +99,9 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">Units</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  Units
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   Approx. 680
                 </CardDescription>
@@ -97,7 +109,9 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">Site Area</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  Site Area
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   133,343 sqft
                 </CardDescription>
@@ -105,7 +119,9 @@ export default function Home() {
             </Card>
             <Card>
               <CardHeader className="text-center">
-                <CardTitle className="text-base sm:text-lg md:text-2xl">TOP</CardTitle>
+                <CardTitle className="text-base sm:text-lg md:text-2xl">
+                  TOP
+                </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
                   TBA
                 </CardDescription>
@@ -115,7 +131,9 @@ export default function Home() {
 
           <Card className="bg-gray-900 text-white dark:bg-gray-800">
             <CardHeader className="text-center">
-              <CardTitle className="text-base sm:text-lg md:text-2xl">Developer</CardTitle>
+              <CardTitle className="text-base sm:text-lg md:text-2xl">
+                Developer
+              </CardTitle>
               <CardDescription className="text-sm sm:text-base md:text-xl font-semibold text-gray-300">
                 CapitaLand Development, UOL Group, Singapore Land Group and
                 Kheng Leong Co.
@@ -142,8 +160,10 @@ export default function Home() {
             <Card>
               <CardHeader className="text-center">
                 <Award className="h-8 w-8 mb-4 mx-auto" />
-                <CardTitle className='text-base md:text-xl'>Conscious Luxury</CardTitle>
-                <CardDescription className='text-sm md:text-base'>
+                <CardTitle className="text-base md:text-xl">
+                  Conscious Luxury
+                </CardTitle>
+                <CardDescription className="text-sm md:text-base">
                   Exemplary sustainable design seamlessly integrated with
                   sophisticated living spaces
                 </CardDescription>
@@ -153,8 +173,10 @@ export default function Home() {
             <Card>
               <CardHeader className="text-center">
                 <Shield className="h-8 w-8 mb-4 mx-auto" />
-                <CardTitle className='text-base md:text-xl'>Intelligent Living</CardTitle>
-                <CardDescription className='text-sm md:text-base'>
+                <CardTitle className="text-base md:text-xl">
+                  Intelligent Living
+                </CardTitle>
+                <CardDescription className="text-sm md:text-base">
                   Cutting-edge home automation crafted for effortless
                   sophistication
                 </CardDescription>
@@ -164,8 +186,10 @@ export default function Home() {
             <Card>
               <CardHeader className="text-center">
                 <Sparkles className="h-8 w-8 mb-4 mx-auto" />
-                <CardTitle className='text-base md:text-xl'>Sanctuary Living</CardTitle>
-                <CardDescription className='text-sm md:text-base'>
+                <CardTitle className="text-base md:text-xl">
+                  Sanctuary Living
+                </CardTitle>
+                <CardDescription className="text-sm md:text-base">
                   Thoughtfully orchestrated spaces fostering serenity and
                   rejuvenation
                 </CardDescription>
@@ -196,8 +220,8 @@ export default function Home() {
               Prime Location
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-4 text-base md:text-xl">
-              Lumina Sanctuary is situated in the heart of Holland Village, offering unparalleled
-              connectivity
+              Lumina Sanctuary is situated in the heart of Holland Village,
+              offering unparalleled connectivity
             </p>
           </div>
 

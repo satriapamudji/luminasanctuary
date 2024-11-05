@@ -34,6 +34,12 @@ const routes = [
     label: "Brochure",
     active: (pathname: string) => pathname === "/brochure",
   },
+  {
+    href: "https://docs.google.com/document/d/1mtsy45T919MQds30cIapnH9au2KykPytWCIRTeJzDPE/edit?usp=sharing",
+    label: "Attributions",
+    active: () => false,
+    external: true,
+  },
 ];
 
 export function Navigation() {

@@ -83,7 +83,7 @@ export default function Home() {
                   Location
                 </CardTitle>
                 <CardDescription className="text-sm sm:text-base md:text-xl font-semibold">
-                  D10 - Tanglin / Holland
+                  D10 - Tanglin / Holland / BT
                 </CardDescription>
               </CardHeader>
             </Card>
